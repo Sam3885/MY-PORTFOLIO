@@ -414,7 +414,7 @@ export default function App() {
             </p>
             <motion.a
               href="/Saksham_Thakur_CV.pdf"
-              download
+              download="Saksham_Thakur_CV.pdf"
               whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(249,115,22,0.3)" }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-3 px-10 py-5 bg-orange-500 text-white font-bold rounded-full text-lg transition-all"
