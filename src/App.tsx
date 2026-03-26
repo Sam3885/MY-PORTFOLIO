@@ -56,7 +56,7 @@ export default function App() {
   });
 
   useEffect(() => {
-    const sections = ['about', 'skills', 'projects', 'experience', 'education'];
+    const sections = ['about', 'skills', 'projects', 'experience', 'education', 'resume'];
     const observerOptions = {
       root: null,
       rootMargin: '-20% 0px -70% 0px',
@@ -86,6 +86,7 @@ export default function App() {
     { name: 'Projects', id: 'projects' },
     { name: 'Experience', id: 'experience' },
     { name: 'Education', id: 'education' },
+    { name: 'Resume', id: 'resume' },
   ];
 
   return (
@@ -401,18 +402,50 @@ export default function App() {
           </div>
         </section>
 
+        {/* Resume Section */}
+        <section id="resume" className="mb-40">
+          <SectionTitle icon={Briefcase}>Resume</SectionTitle>
+          <div className="glass-card p-12 text-center relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-rose-500" />
+            <h3 className="text-3xl font-display font-bold mb-6">Ready to work together?</h3>
+            <p className="text-white/60 max-w-2xl mx-auto mb-10 text-lg">
+              Download my full resume to see a detailed breakdown of my experience, 
+              technical skills, and academic background.
+            </p>
+            <motion.a
+              href="/Saksham_Thakur_CV.pdf"
+              download
+              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(249,115,22,0.3)" }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-3 px-10 py-5 bg-orange-500 text-white font-bold rounded-full text-lg transition-all"
+            >
+              Download Resume <ChevronRight size={22} />
+            </motion.a>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="pt-20 border-t border-white/5 text-center">
-          <h2 className="text-4xl font-display font-bold mb-8">Let's build something <span className="text-gradient">extraordinary</span>.</h2>
-          <div className="flex justify-center gap-8 mb-12">
-            <a href={PERSONAL_INFO.github} target="_blank" className="text-white/40 hover:text-white transition-colors"><Github size={24} /></a>
-            <a href={PERSONAL_INFO.linkedin} target="_blank" className="text-white/40 hover:text-white transition-colors"><Linkedin size={24} /></a>
-            <a href={`mailto:${PERSONAL_INFO.email}`} className="text-white/40 hover:text-white transition-colors"><Mail size={24} /></a>
-          </div>
-          <p className="text-white/20 text-xs font-mono">
-            © {new Date().getFullYear()} {PERSONAL_INFO.name}. Built with React & Tailwind.
-          </p>
-        </footer>
+  <h2 className="text-4xl font-display font-bold mb-8">
+    Let's build something <span className="text-gradient">extraordinary</span>.
+  </h2>
+
+  <div className="flex justify-center gap-8 mb-12">
+    <a href={PERSONAL_INFO.github} target="_blank" className="text-white/40 hover:text-white transition-colors">
+      <Github size={24} />
+    </a>
+    <a href={PERSONAL_INFO.linkedin} target="_blank" className="text-white/40 hover:text-white transition-colors">
+      <Linkedin size={24} />
+    </a>
+    <a href={`mailto:${PERSONAL_INFO.email}`} className="text-white/40 hover:text-white transition-colors">
+      <Mail size={24} />
+    </a>
+  </div>
+
+  <p className="text-white/20 text-xs font-mono">
+    © {new Date().getFullYear()} {PERSONAL_INFO.name}. Built with React & Tailwind.
+  </p>
+</footer>
       </main>
     </div>
   );
