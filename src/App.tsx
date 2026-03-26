@@ -413,7 +413,7 @@ export default function App() {
               technical skills, and academic background.
             </p>
             <motion.a
-              href="/Saksham_Thakur_CV.pdf"
+              href="https://raw.githubusercontent.com/Sam3885/MY-PORTFOLIO/main/public/Saksham_Thakur_CV.pdf"
               download="Saksham_Thakur_CV.pdf"
               whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(249,115,22,0.3)" }}
               whileTap={{ scale: 0.95 }}
